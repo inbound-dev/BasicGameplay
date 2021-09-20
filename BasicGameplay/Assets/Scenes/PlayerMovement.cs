@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
      void Start(){
 
-        float xStart = 8;
-        float yStart = 5;
+        float xStart = 0;
+        float yStart = 32;
         float zStart = 0;
 
         Vector3 StartPos = new Vector3(xStart, zStart, yStart);
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     //gets the status of the input keys and converts them to object movement
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
+        float x = 32;
         float y = Input.GetAxis("Vertical");
 
 
@@ -37,6 +37,13 @@ public class PlayerMovement : MonoBehaviour
 
         //Creates a new Vector3 object to contain the current positioning of the Shpere
         Vector3 moveDirection = new Vector3(x, z, y);
+
+        if(y >= 22){
+            y = 22;
+        }
+        if(y <= (-22)){
+            y = (-22);
+        }
 
         //updates the positon of the Sphere every frame
         transform.position += moveDirection * speed;
