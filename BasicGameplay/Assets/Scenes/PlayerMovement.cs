@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour
      void Start(){
 
         float xStart = 0;
-        float yStart = 32;
-        float zStart = 0;
+        float yStart = 0;
+        float zStart = 32;
 
-        Vector3 StartPos = new Vector3(xStart, zStart, yStart);
+        Vector3 StartPos = new Vector3(xStart, yStart, zStart);
 
         transform.position = StartPos;
     }
@@ -23,27 +23,11 @@ public class PlayerMovement : MonoBehaviour
     //gets the status of the input keys and converts them to object movement
     void Update()
     {
-        float x = 32;
-        float y = Input.GetAxis("Vertical");
-
-
-        //Up and Down movement is currently broken (Issue: once "GetKey" has returned true, it will never return false)
-        if(Input.GetKey("space")){
-            z += 1;
-        }
-        if(Input.GetKey(KeyCode.LeftShift) && z <= 0){
-            z -= 1;
-        }
+        float x = Input.GetAxis("Horizontal");
+        float y = 0;
 
         //Creates a new Vector3 object to contain the current positioning of the Shpere
         Vector3 moveDirection = new Vector3(x, z, y);
-
-        if(y >= 22){
-            y = 22;
-        }
-        if(y <= (-22)){
-            y = (-22);
-        }
 
         //updates the positon of the Sphere every frame
         transform.position += moveDirection * speed;
