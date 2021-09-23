@@ -15,15 +15,27 @@ public class AnimalMovement : MonoBehaviour
         float yStart = 0;
         float zStart = 14;
 
-        zStart -= 1;
+        float speed = 1.0f;
 
         Vector3 newPos = new Vector3(xStart, yStart, zStart);
 
         Instantiate(Moose, newPos, Quaternion.identity);
 
-        if(FoodPrefab.transform.position.z == Moose.transform.position.z && FoodPrefab.transform.position.x == Moose.transform.position.x){
-            Moose.SetActive(false);
-            FoodPrefab.SetActive(false);
+        for(int i = 0; i <= 18; i++){
+            zStart -= 1;
+            transform.position += newPos * speed;
+            if(FoodPrefab.transform.position.z == Moose.transform.position.z && FoodPrefab.transform.position.x == Moose.transform.position.x){
+                Destroy(Moose);
+                Destroy(FoodPrefab);
         }
+
+        }
+
+        if(FoodPrefab.transform.position.z == Moose.transform.position.z && FoodPrefab.transform.position.x == Moose.transform.position.x){
+            Destroy(Moose);
+            Destroy(FoodPrefab);
+        }
+
+
     }
 }
