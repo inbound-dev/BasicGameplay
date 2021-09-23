@@ -318,7 +318,9 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Scenes/AnimalScripts/AnimalMovement.cs"
 "Assets/Scenes/FoodScripts/FoodMovement.cs"
+"Assets/Scenes/OnEnable.cs"
 "Assets/Scenes/PlayerScripts/PlayerBounds.cs"
 "Assets/Scenes/PlayerScripts/PlayerMovement.cs"
 -langversion:8.0

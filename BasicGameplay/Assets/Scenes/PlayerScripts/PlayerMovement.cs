@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject projectilePrefab;
+    public GameObject FoodPrefab;
 
     // Start is called before the first frame update
      void Start(){
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space)){
             //launch the projectile from the player
+            Instantiate(FoodPrefab, transform.position, FoodPrefab.transform.rotation);
             
         }
     }
