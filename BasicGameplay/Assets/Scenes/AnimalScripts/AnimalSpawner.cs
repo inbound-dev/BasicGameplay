@@ -9,21 +9,27 @@ public class AnimalSpawner : MonoBehaviour
     public float xRange = 20f;
     public float zPos = 12.5f;
 
-    void Update()
-    {
+    private float startDelay = 2;
+    private float spawnDelay = 1.5f;
 
-      if(Input.GetKeyDown(KeyCode.S)){
+    public float xPos;
+    public float yPos;
+
+    void Start(){
+      InvokeRepeating("AnimalSpawning", startDelay, spawnDelay);
+    }
+    void AnimalSpawning(){
           int animalIndex = UnityEngine.Random.Range(0, animalPrefab.Length - 1);
 
           Vector3 spawnPos = new Vector3(UnityEngine.Random.Range(-20, xRange), 0, zPos);
 
-          animalPrefab[animalIndex].transform.Rotate(0f, 180f, 0f);
+          xPos = spawnPos.x;
+          yPos = spawnPos.y;
 
           Instantiate(animalPrefab[animalIndex], spawnPos, animalPrefab[animalIndex].transform.rotation);
 
           animalPrefab[animalIndex].SetActive(true);
 
-          //Debug.Log(animalPrefab.Length);
-        }
-    }
+          Debug.Log("HERE!");
+      }
 }
