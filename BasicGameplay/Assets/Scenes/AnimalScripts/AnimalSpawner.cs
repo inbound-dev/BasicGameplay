@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class AnimalSpawner : MonoBehaviour
 {
-    Public GameObject[] animalPrefab;
+    public GameObject[] animalPrefab;
+
+    public float xRange = 20f;
+    public float zPos = 12.5f;
 
     void Update()
     {
-      if(Input.GetKeyDown(KeyCode.S)) {
-          //Random rand = new Random();
-          int animalIndex = System.Random(0, animalPrefab.Length());
-          Instantiate(animalPrefab[animalIndex], new Vector3(0,0,20), animalPrefab[animalIndex].transform.rotation);
+
+      if(Input.GetKeyDown(KeyCode.S)){
+          int animalIndex = UnityEngine.Random.Range(0, animalPrefab.Length - 1);
+
+          Vector3 spawnPos = new Vector3(UnityEngine.Random.Range(-20, xRange), 0, zPos);
+
+          animalPrefab[animalIndex].transform.Rotate(0f, 180f, 0f);
+
+          Instantiate(animalPrefab[animalIndex], spawnPos, animalPrefab[animalIndex].transform.rotation);
+
+          animalPrefab[animalIndex].SetActive(true);
+
+          //Debug.Log(animalPrefab.Length);
         }
     }
 }

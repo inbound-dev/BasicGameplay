@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
         //Creates a new Vector3 object to contain the current positioning of the Shpere
         Vector3 moveDirection = new Vector3(x, z, y);
 
-        //updates the positon of the Sphere every frame
-        transform.position += moveDirection * speed * FPS;
+        //updates the positon of the Player every frame
+        transform.position += moveDirection * speed;
 
         if(Input.GetKeyDown(KeyCode.Space)){
             //launch the projectile from the player
