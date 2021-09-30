@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431108}
   - component: {fileID: 9537896}
-  - component: {fileID: 1131431113325325417}
+  - component: {fileID: 113672560006354635}
   m_Layer: 0
   m_Name: Animal_Moose_01
   m_TagString: Untagged
@@ -481,7 +481,7 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1131431113325325417
+--- !u!114 &113672560006354635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,10 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b0c75aded6144f6a0677dacd0a9a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animal: {fileID: 148086}
   speed: 0.1
-  x: 0
-  y: 0
-  z: 0
 --- !u!1 &153968
 GameObject:
   m_ObjectHideFlags: 0

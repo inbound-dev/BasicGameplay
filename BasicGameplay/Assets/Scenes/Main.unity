@@ -217,6 +217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalPrefab:
   - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
+  - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
+  - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
   xRange: 20
   zPos: 12.5
   xPos: 0
@@ -266,10 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b0c75aded6144f6a0677dacd0a9a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animal: {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
   speed: 0.5
-  x: 0
-  y: 0
-  z: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
