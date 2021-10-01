@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AnimalSpawner : MonoBehaviour
 {
-    public GameObject[] animalPrefab;
+    public GameObject animalPrefab;
 
-    GameObject animalClone;
+    public GameObject animalClone;
 
     public float xRange = 20f;
     public float zPos = -24f;
@@ -23,12 +23,10 @@ public class AnimalSpawner : MonoBehaviour
 
     // spawns an animal at a random x position
     void AnimalSpawning(){
-          int animalIndex = UnityEngine.Random.Range(0, animalPrefab.Length - 1);
-          
           xPos = UnityEngine.Random.Range(-20, xRange);
 
           Vector3 spawnPos = new Vector3(xPos, 0, zPos);
 
-          animalClone = Instantiate(animalPrefab[animalIndex], spawnPos, animalPrefab[animalIndex].transform.rotation);
+          animalClone = Instantiate(animalPrefab, spawnPos, animalPrefab.transform.rotation);
       }
 }

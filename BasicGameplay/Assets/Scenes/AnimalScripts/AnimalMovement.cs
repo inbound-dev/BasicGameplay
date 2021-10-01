@@ -18,12 +18,16 @@ public class AnimalMovement : MonoBehaviour
 
     void Update()
     {
+        // TRY TO USE 12.5 INSTEAD OF -12.5
+        
         AnimalSpawner spawner = animal.GetComponent<AnimalSpawner>();
         z = spawner.zPos; 
 
+        GameObject clone = spawner.animalClone;
+
         // checks if z is less than -12.5
         if(z <= (-12.5)){
-            animal.SetActive(false);
+            clone.SetActive(false);
         } 
 
         // checks if z is greater than -12.5
@@ -34,7 +38,7 @@ public class AnimalMovement : MonoBehaviour
             Debug.Log("z is greater than -12.5");
 
             //updates the positon of the Animal every frame if z !> 2 
-            transform.position = new Vector3(x, 0, z) * speed;
+            clone.transform.position = new Vector3(x, 0, z) * speed;
         }
     }
 }
