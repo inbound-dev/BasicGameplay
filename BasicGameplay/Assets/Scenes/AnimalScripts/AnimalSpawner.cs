@@ -22,7 +22,7 @@ public class AnimalSpawner : MonoBehaviour
           
           xPos = UnityEngine.Random.Range(-20, xRange);
 
-          Vector3 spawnPos = new Vector3(xPos, 0, 12.5f);
+          Vector3 spawnPos = new Vector3(xPos, 0, -12.5f);
 
           Instantiate(animalPrefab[animalIndex], spawnPos, animalPrefab[animalIndex].transform.rotation);
       }

@@ -12,7 +12,7 @@ public class AnimalMovement : MonoBehaviour
 
     void Start(){
         AnimalSpawner spawner = animal.GetComponent<AnimalSpawner>();
-        z = spawner.zPos;
+        z = -24f;
         x = spawner.xPos;
         y = 0;
 
@@ -20,11 +20,6 @@ public class AnimalMovement : MonoBehaviour
 
     void Update()
     {
-
-        if(z < (-10)){
-            Destroy(animal);
-        }
-        
         z -= 1;
         
         //updates the positon of the Animal every frame

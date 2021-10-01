@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             //launch the projectile from the player
             Instantiate(FoodPrefab, transform.position, FoodPrefab.transform.rotation);
-            
         }
     }
 }
