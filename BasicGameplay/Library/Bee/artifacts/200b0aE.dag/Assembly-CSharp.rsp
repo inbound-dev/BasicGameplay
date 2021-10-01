@@ -318,7 +318,6 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/VSSettingsProvider.ref.dll"
-"Assets/Scenes/AnimalScripts/AnimalBounds.cs"
 "Assets/Scenes/AnimalScripts/AnimalMovement.cs"
 "Assets/Scenes/AnimalScripts/AnimalSpawner.cs"
 "Assets/Scenes/FoodScripts/FoodMovement.cs"

@@ -14,15 +14,27 @@ public class AnimalMovement : MonoBehaviour
         AnimalSpawner spawner = animal.GetComponent<AnimalSpawner>();
         z = -24f;
         x = spawner.xPos;
-        y = 0;
-
     }
 
     void Update()
     {
-        z -= 1;
-        
-        //updates the positon of the Animal every frame
-        transform.position = new Vector3(x, y, z) * speed;
+        AnimalSpawner spawner = animal.GetComponent<AnimalSpawner>();
+        z = spawner.zPos; 
+
+        // checks if z is less than -12.5
+        if(z <= (-12.5)){
+            animal.SetActive(false);
+        } 
+
+        // checks if z is greater than -12.5
+        else if(z > (-12.5))
+        {
+            z -= 1;
+
+            Debug.Log("z is greater than -12.5");
+
+            //updates the positon of the Animal every frame if z !> 2 
+            transform.position = new Vector3(x, 0, z) * speed;
+        }
     }
 }
