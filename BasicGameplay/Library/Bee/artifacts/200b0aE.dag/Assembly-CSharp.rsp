@@ -320,6 +320,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scenes/AnimalScripts/AnimalMovement.cs"
 "Assets/Scenes/AnimalScripts/AnimalSpawner.cs"
+"Assets/Scenes/AnimalScripts/CollisionDetection.cs"
 "Assets/Scenes/FoodScripts/FoodMovement.cs"
 "Assets/Scenes/PlayerScripts/PlayerBounds.cs"
 "Assets/Scenes/PlayerScripts/PlayerMovement.cs"

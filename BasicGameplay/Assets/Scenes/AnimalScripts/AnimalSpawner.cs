@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimalSpawner : MonoBehaviour
 {
+  // defines variables and constants that will be used later
     public GameObject animalPrefab;
 
     public float xRange = 20f;
@@ -27,7 +28,5 @@ public class AnimalSpawner : MonoBehaviour
           Vector3 spawnPos = new Vector3(xPos, 0, zPos);
 
           Instantiate(animalPrefab, spawnPos, animalPrefab.transform.rotation);
-
-          //zPos = animalPrefab.transform.position.z;
       }
 }

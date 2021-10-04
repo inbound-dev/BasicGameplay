@@ -13,6 +13,7 @@ public class AnimalMovement : MonoBehaviour
       transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
       if(transform.position.z <= (-18f)){
+          Debug.Log("GAME OVER!");
           Destroy(gameObject);
       }
     }
