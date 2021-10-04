@@ -6,8 +6,6 @@ public class AnimalSpawner : MonoBehaviour
 {
     public GameObject animalPrefab;
 
-    public GameObject animalClone;
-
     public float xRange = 20f;
     public float zPos = -24f;
 
@@ -23,10 +21,13 @@ public class AnimalSpawner : MonoBehaviour
 
     // spawns an animal at a random x position
     void AnimalSpawning(){
+
           xPos = UnityEngine.Random.Range(-20, xRange);
 
           Vector3 spawnPos = new Vector3(xPos, 0, zPos);
 
-          animalClone = Instantiate(animalPrefab, spawnPos, animalPrefab.transform.rotation);
+          Instantiate(animalPrefab, spawnPos, animalPrefab.transform.rotation);
+
+          //zPos = animalPrefab.transform.position.z;
       }
 }

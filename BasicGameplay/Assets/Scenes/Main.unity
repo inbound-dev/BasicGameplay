@@ -215,10 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddf9eda1a85646f19c0a35187c3937d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalPrefab:
-  - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
-  - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
-  - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
+  animalPrefab: {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
   xRange: 20
   zPos: 12.5
   xPos: 0
@@ -267,8 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b0c75aded6144f6a0677dacd0a9a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animal: {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
-  speed: 0.5
+  animal: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,11 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddf9eda1a85646f19c0a35187c3937d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalPrefab:
-  - {fileID: 139514, guid: 03e4c5418c1e9164bb1955135d815833, type: 3}
-  - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
-  - {fileID: 110416, guid: d08ba223a91fb3440afcbed27fafa936, type: 3}
-  - {fileID: 142896, guid: e2b54f18a442ae84cb37b05e649edfc0, type: 3}
+  animalPrefab: {fileID: 0}
   xRange: 20
   zPos: 12.5
   xPos: 0
@@ -1065,7 +1057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786607897}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.59, y: 0.41, z: 0.38}
+  m_LocalPosition: {x: 0.59, y: 0.41, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 786848865}
